@@ -2,13 +2,20 @@
   "name": "next-chakra-lint",
   "version": "0.1.0",
   "private": true,
+  "author": "devleonardorabelo <devleonardorabelo@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "install": "^0.13.0",
     "next": "9.5.2",
+    "npm": "^6.14.8",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
