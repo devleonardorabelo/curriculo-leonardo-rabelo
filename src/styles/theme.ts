@@ -1,6 +1,6 @@
-import { theme } from '@chakra-ui/core';
+import { theme, DefaultTheme } from '@chakra-ui/core';
 
-const customTheme = {
+const customTheme: DefaultTheme = {
   ...theme,
   fonts: {
     body: 'Baloo Tamma 2, system-ui, sans-serif',

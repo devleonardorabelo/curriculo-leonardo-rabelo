@@ -1,15 +1,29 @@
 import React from 'react';
 
-import { RoundedBox } from '../components/box';
+import { Grid } from '@chakra-ui/core';
+import { RoundedBox } from '../components/Boxes';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-      <RoundedBox>
-        <p>Olá</p>
+    <Grid
+      templateAreas="
+        'about form'
+      "
+      gap={4}
+      padding={8}
+      justifyContent="center"
+      alignItems="center"
+      backgroundColor="gray.900"
+      height="100vh"
+      gridTemplateColumns="minmax(300px, 500px) 1fr"
+    >
+      <RoundedBox gridArea="about">
+        <p>1</p>
       </RoundedBox>
-    </div>
+      <RoundedBox gridArea="form">
+        <p>2</p>
+      </RoundedBox>
+    </Grid>
   );
 };
 

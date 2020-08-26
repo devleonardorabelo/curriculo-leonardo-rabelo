@@ -13,7 +13,7 @@ interface Props {
   children: JSX.Element;
 }
 
-const ThemeContainer: React.FC<Props> = ({ children }: Props) => (
+const ThemeContainer: React.FC = ({ children }: Props) => (
   <ChakraTProvider theme={theme}>
     <ColorModeProvider value="dark">
       <EmotionTProvider theme={theme}>
