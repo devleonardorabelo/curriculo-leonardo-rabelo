@@ -1,18 +1,19 @@
 import React from 'react';
 import { Box, PseudoBox } from '@chakra-ui/core';
 
-export interface Props {
-  children?: JSX.Element;
+interface Props {
+  children: React.ReactNode;
   gridArea?: string;
+  width?: string;
 }
 
-export const RoundedBox: React.FC<Props> = ({ children, gridArea }: Props) => (
+const RoundedBox: React.FC<Props> = ({ children, ...props }: Props) => (
   <Box>
     <PseudoBox
+      {...props}
       backgroundColor="gray.800"
       padding={4}
       borderRadius="md"
-      gridArea={gridArea}
       _hover={{
         borderColor: 'gray.200',
         marginTop: -2,
@@ -24,3 +25,10 @@ export const RoundedBox: React.FC<Props> = ({ children, gridArea }: Props) => (
     </PseudoBox>
   </Box>
 );
+
+RoundedBox.defaultProps = {
+  gridArea: null,
+  width: 'auto',
+};
+
+export default RoundedBox;

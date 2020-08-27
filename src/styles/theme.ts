@@ -3,8 +3,8 @@ import { theme, DefaultTheme } from '@chakra-ui/core';
 const customTheme: DefaultTheme = {
   ...theme,
   fonts: {
-    body: 'Baloo Tamma 2, system-ui, sans-serif',
-    heading: 'Baloo Tamma 2, system-ui, sans-serif',
+    body: 'Montserrat',
+    heading: 'Montserrat',
     mono: 'Menlo, monospace',
   },
   fontWeights: {
