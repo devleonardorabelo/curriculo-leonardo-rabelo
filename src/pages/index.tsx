@@ -1,6 +1,9 @@
 import React from 'react';
 
 import { Grid, Heading, Avatar, Flex, Box } from '@chakra-ui/core';
+
+import { GitHub } from '@material-ui/icons';
+
 import RoundedBox from '../components/Box/Rounded';
 import RoundedButton from '../components/Button/Rounded';
 import SocialNetwork from '../components/Button/SocialNetwork';
@@ -37,11 +40,19 @@ const Home: React.FC = () => {
             <Heading as="h2" size="lg" letterSpacing="0.8px">
               Leonardo Rabelo
             </Heading>
-            <Heading as="h3" size="sm" fontWeight={400} letterSpacing="0.8px">
+            <Heading
+              as="h3"
+              size="sm"
+              fontWeight={400}
+              letterSpacing="0.8px"
+              marginBottom={4}
+            >
               Desenvolvedor Full-Stack
             </Heading>
             <Box>
-              <SocialNetwork>1</SocialNetwork>
+              <SocialNetwork>
+                <GitHub />
+              </SocialNetwork>
             </Box>
           </Flex>
         </Flex>

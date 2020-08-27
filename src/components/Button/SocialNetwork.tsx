@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box, Button } from '@chakra-ui/core';
 import styles from './Button.module.css';
 
 interface Props {
@@ -11,9 +12,9 @@ const SocialNetwork: React.FC<Props> = ({
   action,
   ...props
 }: Props) => (
-  <a className={styles.socialNetwork} {...props}>
-    {children}
-  </a>
+  <Button variant="outline">
+    <Box>{children}</Box>
+  </Button>
 );
 
 SocialNetwork.defaultProps = {
