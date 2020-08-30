@@ -7,7 +7,7 @@ interface Props {
 }
 
 const LinkButton: React.FC<Props> = ({ children, action, ...props }: Props) => (
-  <Button variant="outline">
+  <Button variant="outline" {...props} onClick={action}>
     <Box>{children}</Box>
   </Button>
 );

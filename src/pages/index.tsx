@@ -1,23 +1,34 @@
-import React from 'react';
-
-import { Grid, Heading, Avatar, Flex, Box, Link } from '@chakra-ui/core';
-
-import { GitHub, LinkedIn, Mail } from '@material-ui/icons';
+/* eslint-disable camelcase */
+import React, { useEffect, useState } from 'react';
+import { Grid, Heading, Avatar, Flex, Link } from '@chakra-ui/core';
+import { GitHub, LinkedIn, Mail, Folder } from '@material-ui/icons';
 
 import RoundedBox from '../components/Box/Rounded';
-import RoundedButton from '../components/Button/Rounded';
 import LinkButton from '../components/Button/LinkButton';
 
-const avatar =
-  'https://avatars3.githubusercontent.com/u/59609478?s=460&u=82d661493cc025f92673a13386e3cae90d22ad8b&v=4';
+import { Profile } from '../types';
+import LoadProfileGithub from '../services/loadProfileInfo';
 
 const Home: React.FC = () => {
+  const [githubProfile, setGithubProfile] = useState<Profile>();
+
+  const loadProfileInfo = async () => {
+    const data = await LoadProfileGithub('devleonardorabelo');
+    setGithubProfile(data.body);
+  };
+
+  useEffect(() => {
+    loadProfileInfo();
+  }, []);
+
+  if (!githubProfile) return <p>carregando</p>;
+
   return (
     <Grid
       margin="0 auto"
       maxWidth="1140px"
       templateAreas="
-          'avatar skills'
+          'avatar more'
           'about about'
         "
       gap={4}
@@ -27,7 +38,7 @@ const Home: React.FC = () => {
       <RoundedBox gridArea="avatar">
         <Flex>
           <Avatar
-            src={avatar}
+            src={githubProfile.avatar_url}
             size="2xl"
             style={{
               border: '4px solid #46D8A9',
@@ -37,7 +48,7 @@ const Home: React.FC = () => {
           />
           <Flex justifyContent="center" flexDirection="column" paddingLeft={4}>
             <Heading as="h2" size="lg" letterSpacing="0.8px" fontWeight={600}>
-              Leonardo Rabelo
+              {githubProfile.name}
             </Heading>
             <Heading
               as="h3"
@@ -67,9 +78,17 @@ const Home: React.FC = () => {
           </Flex>
         </Flex>
       </RoundedBox>
-      <RoundedBox gridArea="skills">
-        <p>FwfFEGWE</p>
-        <RoundedButton action={() => {}} />
+      <RoundedBox gridArea="more">
+        <Heading size="sm">Github</Heading>
+        <div
+          style={{
+            alignItems: 'center',
+            height: '64px',
+            backgroundColor: '#F454852',
+          }}
+        >
+          <Folder fontSize="small" />
+        </div>
       </RoundedBox>
       <RoundedBox gridArea="about">
         <Grid
