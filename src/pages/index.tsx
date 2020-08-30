@@ -1,25 +1,16 @@
 /* eslint-disable camelcase */
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Grid, Heading, Avatar, Flex, Link } from '@chakra-ui/core';
 import { GitHub, LinkedIn, Mail, Folder } from '@material-ui/icons';
+
+import ProfileContext from '../contexts/profile';
 
 import RoundedBox from '../components/Box/Rounded';
 import LinkButton from '../components/Button/LinkButton';
 
-import { Profile } from '../types';
-import LoadProfileGithub from '../services/loadProfileInfo';
-
 const Home: React.FC = () => {
-  const [githubProfile, setGithubProfile] = useState<Profile>();
-
-  const loadProfileInfo = async () => {
-    const data = await LoadProfileGithub('devleonardorabelo');
-    setGithubProfile(data.body);
-  };
-
-  useEffect(() => {
-    loadProfileInfo();
-  }, []);
+  const githubProfile = useContext(ProfileContext);
+  console.log(githubProfile);
 
   if (!githubProfile) return <p>carregando</p>;
 
@@ -80,15 +71,6 @@ const Home: React.FC = () => {
       </RoundedBox>
       <RoundedBox gridArea="more">
         <Heading size="sm">Github</Heading>
-        <div
-          style={{
-            alignItems: 'center',
-            height: '64px',
-            backgroundColor: '#F454852',
-          }}
-        >
-          <Folder fontSize="small" />
-        </div>
       </RoundedBox>
       <RoundedBox gridArea="about">
         <Grid

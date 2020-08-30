@@ -8,6 +8,11 @@ export interface Profile {
   public_repos: string;
 }
 
+export interface ComponentProps {
+  children?: React.ReactNode;
+  action: (e) => void;
+}
+
 export type HttpMethod = 'post' | 'get' | 'put' | 'delete';
 
 export type HttpRequest = {

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Button } from '@chakra-ui/core';
 
-interface Props {
-  children?: React.ReactNode;
-  action: (e) => void;
-}
+import { ComponentProps } from '../../types';
 
-const LinkButton: React.FC<Props> = ({ children, action, ...props }: Props) => (
+const LinkButton: React.FC<ComponentProps> = ({
+  children,
+  action,
+  ...props
+}: ComponentProps) => (
   <Button variant="outline" {...props} onClick={action}>
     <Box>{children}</Box>
   </Button>
