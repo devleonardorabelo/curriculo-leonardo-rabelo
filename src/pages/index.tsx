@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import React, { useContext } from 'react';
-import { Grid, Heading, Avatar, Flex, Link } from '@chakra-ui/core';
+import { Grid, Heading, Avatar, Flex, Link, SimpleGrid } from '@chakra-ui/core';
 import { GitHub, LinkedIn, Mail, Folder } from '@material-ui/icons';
 
 import ProfileContext from '../contexts/profile';
@@ -10,21 +10,25 @@ import LinkButton from '../components/Button/LinkButton';
 
 const Home: React.FC = () => {
   const githubProfile = useContext(ProfileContext);
-  console.log(githubProfile);
-
-  if (!githubProfile) return <p>carregando</p>;
 
   return (
     <Grid
       margin="0 auto"
       maxWidth="1140px"
-      templateAreas="
-          'avatar more'
-          'about about'
-        "
+      templateAreas={[
+        "'avatar''more''about'",
+        "'avatar''more''about'",
+        "'avatar''more''about'",
+        "'avatar more''about about'",
+      ]}
       gap={4}
       padding={8}
-      gridTemplateColumns="minmax(600px, 450px) minmax(300px, 1fr)"
+      gridTemplateColumns={[
+        '100% 100% 100%',
+        '100% 100% 100%',
+        '100% 100% 100%',
+        'minmax(600px, 450px) minmax(300px, 1fr)',
+      ]}
     >
       <RoundedBox gridArea="avatar">
         <Flex>
@@ -56,13 +60,13 @@ const Home: React.FC = () => {
               "
               gap={2}
             >
-              <LinkButton>
+              <LinkButton href="https://github.com/devleonardorabelo">
                 <GitHub />
               </LinkButton>
-              <LinkButton>
+              <LinkButton href="https://www.linkedin.com/in/leonardomrabelo/">
                 <LinkedIn />
               </LinkButton>
-              <LinkButton>
+              <LinkButton href="mailto:devleonardorabelo@gmail.com">
                 <Mail />
               </LinkButton>
             </Grid>
@@ -74,11 +78,14 @@ const Home: React.FC = () => {
       </RoundedBox>
       <RoundedBox gridArea="about">
         <Grid
-          templateAreas='
-            "mainSkills otherSkills"
-          '
+          templateAreas={[
+            "'mainSkills' 'otherSkills'",
+            "'mainSkills' 'otherSkills'",
+            "'mainSkills' 'otherSkills'",
+            "'mainSkills otherSkills'",
+          ]}
         >
-          <Flex flexDirection="column" gridArea="mainSkills">
+          <Flex flexDirection="column" gridArea="mainSkills" marginBottom={8}>
             <Heading size="md" marginBottom={4}>
               Principais Habilidades
             </Heading>

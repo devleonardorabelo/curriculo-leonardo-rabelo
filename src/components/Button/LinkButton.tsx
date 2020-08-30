@@ -1,20 +1,15 @@
 import React from 'react';
 import { Box, Button } from '@chakra-ui/core';
 
-import { ComponentProps } from '../../types';
+interface Props {
+  href: string;
+  children: React.ReactNode;
+}
 
-const LinkButton: React.FC<ComponentProps> = ({
-  children,
-  action,
-  ...props
-}: ComponentProps) => (
-  <Button variant="outline" {...props} onClick={action}>
+const LinkButton: React.FC<Props> = ({ children, href, ...props }: Props) => (
+  <Button variant="outline" {...props} onClick={() => window.open(href)}>
     <Box>{children}</Box>
   </Button>
 );
-
-LinkButton.defaultProps = {
-  children: 'Enviar',
-};
 
 export default LinkButton;
