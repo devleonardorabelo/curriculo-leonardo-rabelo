@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import React, { useContext } from 'react';
-import { Grid, Heading, Avatar, Flex, Link, SimpleGrid } from '@chakra-ui/core';
-import { GitHub, LinkedIn, Mail, Folder } from '@material-ui/icons';
+import { Grid, Heading, Avatar, Flex, Link } from '@chakra-ui/core';
+import { GitHub, LinkedIn, Mail } from '@material-ui/icons';
 
 import ProfileContext from '../contexts/profile';
 
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
         "'avatar more''about about'",
       ]}
       gap={4}
-      padding={8}
+      padding={[4, 8, 8, 8]}
       gridTemplateColumns={[
         '100% 100% 100%',
         '100% 100% 100%',
@@ -34,8 +34,11 @@ const Home: React.FC = () => {
         <Flex>
           <Avatar
             src={githubProfile.avatar_url}
-            size="2xl"
             style={{
+              height: '25vw',
+              width: '25vw',
+              maxWidth: '114px',
+              maxHeight: '114px',
               border: '4px solid #46D8A9',
               padding: 6,
               backgroundColor: 'transparent',

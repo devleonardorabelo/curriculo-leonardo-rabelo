@@ -21,8 +21,8 @@ const RoundedBox: React.FC<Props> = ({
       borderRadius="md"
       _hover={{
         borderColor: 'gray.200',
-        marginTop: -2,
-        marginBottom: 2,
+        marginTop: -1,
+        marginBottom: 1,
         boxShadow: 'inset 0px 0px 0px 2px #01E3A1',
         transition: '400ms',
       }}
