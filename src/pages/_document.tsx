@@ -16,6 +16,7 @@ class MyDocument extends Document<DocumentProps> {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
+          <meta name="theme-color" content="#171923" />
         </Head>
         <body>
           <Main />
