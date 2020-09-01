@@ -160,31 +160,31 @@ const Home: React.FC = () => {
           </Flex>
           <Flex flexDirection="column" gridArea="otherSkills">
             <Heading size="md" marginBottom={4}>
-              Principais Habilidades
+              Outras Habilidades
             </Heading>
             <Link className="linkButton" href="http">
-              <img src="/icons/icons8-javascript.svg" alt="" />
-              <p>Javascript</p>
+              <img src="/icons/icons8-git.svg" alt="" />
+              <p>Git</p>
             </Link>
 
             <Link className="linkButton" href="http">
-              <img src="/icons/icons8-typescript.svg" alt="" />
-              <p>Typescript</p>
+              <img src="/icons/icons8-html.svg" alt="" />
+              <p>HTML5</p>
             </Link>
 
             <Link className="linkButton" href="http">
-              <img src="/icons/icons8-node-js.svg" alt="" />
-              <p>Node JS</p>
+              <img src="/icons/icons8-css.svg" alt="" />
+              <p>CSS3</p>
             </Link>
 
             <Link className="linkButton" href="http">
-              <img src="/icons/icons8-react-native.svg" alt="" />
-              <p>ReactJS / React Native</p>
+              <img src="/icons/icons8-heroku.svg" alt="" />
+              <p>Heroku</p>
             </Link>
 
             <Link className="linkButton" href="http">
-              <img src="/icons/icons8-mongodb.svg" alt="" />
-              <p>MongoDB</p>
+              <img src="/icons/icons8-chakra.svg" alt="" />
+              <p>Chakra UI</p>
             </Link>
           </Flex>
         </Grid>
