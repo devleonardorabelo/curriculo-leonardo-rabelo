@@ -68,7 +68,7 @@ const Home: React.FC = () => {
             alignItems={['center', 'flex-start', 'flex-start', 'flex-start']}
           >
             <Heading as="h2" size="lg" letterSpacing="0.8px" fontWeight={600}>
-              {githubProfile.name}
+              {githubProfile.name || 'Leonardo Rabelo'}
             </Heading>
             <Heading
               as="h3"
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
               fontStyle="italic"
               marginBottom={4}
             >
-              {`"${githubProfile.bio}"`}
+              {`"${githubProfile.bio || 'Carregando...'}"`}
             </Heading>
             <Grid
               templateAreas="
