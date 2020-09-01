@@ -63,7 +63,7 @@ const Home: React.FC = () => {
           <Flex
             justifyContent="center"
             flexDirection="column"
-            paddingLeft={4}
+            paddingLeft={[0, 4, 4, 4]}
             gridArea="about"
             alignItems={['center', 'flex-start', 'flex-start', 'flex-start']}
           >
