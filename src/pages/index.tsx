@@ -111,11 +111,19 @@ const Home: React.FC = () => {
         <Heading size="md" marginBottom={4}>
           Projetos desenvolvidos
         </Heading>
-        <Link className="linkButton" href="http">
+        <Link
+          target="_blank"
+          className="linkButton"
+          href="https://www.carpede.com"
+        >
           <img src="/icons/carpede.svg" alt="" />
           <p>Carpede</p>
         </Link>
-        <Link className="linkButton" href="http">
+        <Link
+          target="_blank"
+          className="linkButton"
+          href="https://www.pluginzap.com"
+        >
           <img src="/icons/pluginzap.svg" alt="" />
           <p>PluginZap</p>
         </Link>
@@ -133,27 +141,47 @@ const Home: React.FC = () => {
             <Heading size="md" marginBottom={4}>
               Principais Habilidades
             </Heading>
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://www.javascript.com"
+            >
               <img src="/icons/icons8-javascript.svg" alt="" />
               <p>Javascript</p>
             </Link>
 
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://www.typescriptlang.org"
+            >
               <img src="/icons/icons8-typescript.svg" alt="" />
               <p>Typescript</p>
             </Link>
 
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://nodejs.org/en/"
+            >
               <img src="/icons/icons8-node-js.svg" alt="" />
               <p>Node JS</p>
             </Link>
 
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://reactnative.dev"
+            >
               <img src="/icons/icons8-react-native.svg" alt="" />
               <p>ReactJS / React Native</p>
             </Link>
 
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://www.mongodb.com"
+            >
               <img src="/icons/icons8-mongodb.svg" alt="" />
               <p>MongoDB</p>
             </Link>
@@ -162,27 +190,47 @@ const Home: React.FC = () => {
             <Heading size="md" marginBottom={4}>
               Outras Habilidades
             </Heading>
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://git-scm.com"
+            >
               <img src="/icons/icons8-git.svg" alt="" />
               <p>Git</p>
             </Link>
 
-            <Link className="linkButton" href="http">
-              <img src="/icons/icons8-html.svg" alt="" />
-              <p>HTML5</p>
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://nextjs.org"
+            >
+              <img src="/icons/icons8-nextjs.svg" alt="" />
+              <p>NextJS</p>
             </Link>
 
-            <Link className="linkButton" href="http">
-              <img src="/icons/icons8-css.svg" alt="" />
-              <p>CSS3</p>
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://sass-lang.com"
+            >
+              <img src="/icons/icons8-sass.svg" alt="" />
+              <p>Sass</p>
             </Link>
 
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://dashboard.heroku.com"
+            >
               <img src="/icons/icons8-heroku.svg" alt="" />
               <p>Heroku</p>
             </Link>
 
-            <Link className="linkButton" href="http">
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://chakra-ui.com"
+            >
               <img src="/icons/icons8-chakra.svg" alt="" />
               <p>Chakra UI</p>
             </Link>
