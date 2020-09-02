@@ -86,7 +86,7 @@ const Home: React.FC = () => {
               fontStyle="italic"
               marginBottom={4}
             >
-              {`"${githubProfile.bio || 'Carregando...'}"`}
+              {githubProfile.bio || 'Carregando...'}
             </Heading>
             <Grid
               templateAreas="
@@ -269,6 +269,50 @@ const Home: React.FC = () => {
           como principal. No momento parei minha carreira para focar
           exclusivamente em meus estudos das novas tecnologias e procurar novas
           oportunidades.
+        </Text>
+        <Link
+          target="_blank"
+          className="linkButton"
+          href="https://www.carpede.com"
+        >
+          <img src="/icons/carpede.svg" alt="" />
+          <Heading size="sm">Carpede</Heading>
+        </Link>
+        <Text marginBottom={4}>
+          A Carpede é um projeto que tem como responsabilidade, dar a
+          oportunidade às empresas de delivery de pequeno e médio porte. Neste
+          projeto o desafio foi fazer com que todos os aplicativos funcionassem
+          através de duas APIs principais, onde a empresa pudesse gerenciar seus
+          produtos e entregas diretamente de um aplicativo principal e receber
+          um aplicativo indidual. Um aplicativo base foi criado e a partir do
+          mesmo é gerado um aplicativo para cada empresa, onde podem estar
+          distribuindo para seus clientes diretamente da Play Store.
+        </Text>
+        <Text marginBottom={8}>
+          A próxima versão vai contar com uma versão web, ao qual está em
+          testes. O projeto é feito em React Native no mobile e NextJS na versão
+          web, fui o responsável por todos o desenvolvimento e idealização.
+        </Text>
+        <Link
+          target="_blank"
+          className="linkButton"
+          href="https://www.carpede.com"
+        >
+          <img src="/icons/pluginzap.svg" alt="" />
+          <Heading size="sm">PluginZap</Heading>
+        </Link>
+        <Text marginBottom={4}>
+          O PluginZap é um plugin que tem o intuito de auxiliar os sites que
+          possuem uma certa comunicação com o usuário/cliente e direciona-los ao
+          whatsapp empresarial para um melhor atendimento. Seu funcionamento é
+          bastante pratico e usual. Ao adicionar na página escolhida, o plugin
+          insere um botão customizado ao lado inferior direito da página no
+          formato da logo do whatsapp, onde ao clicar, é visualizado um
+          formulário com alguns campos para o usuário final entrar em contato.
+        </Text>
+        <Text marginBottom={8}>
+          Este projeto foi criado utilizando PHP, HTML5 e CSS3, onde fui o
+          front-end e idealizador da interface.
         </Text>
       </RoundedBox>
     </Grid>
