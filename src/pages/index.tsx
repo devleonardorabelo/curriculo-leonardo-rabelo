@@ -1,7 +1,25 @@
 /* eslint-disable camelcase */
 import React, { useContext } from 'react';
-import { Grid, Heading, Avatar, Flex, Link, Text } from '@chakra-ui/core';
-import { GitHub, LinkedIn, Mail } from '@material-ui/icons';
+import {
+  Grid,
+  Heading,
+  Avatar,
+  Flex,
+  Link,
+  Text,
+  List,
+  ListItem,
+  ListIcon,
+} from '@chakra-ui/core';
+import {
+  GitHub,
+  LinkedIn,
+  Mail,
+  Folder,
+  BorderClear,
+  Code,
+  ChangeHistory,
+} from '@material-ui/icons';
 
 import ProfileContext from '../contexts/profile';
 
@@ -16,17 +34,17 @@ const Home: React.FC = () => {
       margin="0 auto"
       maxWidth="1140px"
       templateAreas={[
-        "'avatar''more''skills''about'",
-        "'avatar''more''skills''about'",
-        "'avatar''more''skills''about'",
-        "'avatar more''skills skills''about about'",
+        "'avatar''more''skills''moreSkills''about'",
+        "'avatar''more''skills''moreSkills''about'",
+        "'avatar''more''skills''moreSkills''about'",
+        "'avatar more''skills skills''moreSkills moreSkills''about about'",
       ]}
       gap={4}
       padding={[4, 8, 8, 8]}
       gridTemplateColumns={[
-        '100% 100% 100%',
-        '100% 100% 100%',
-        '100% 100% 100%',
+        '100%',
+        '100%',
+        '100%',
         'minmax(600px, 450px) minmax(300px, 1fr)',
       ]}
     >
@@ -237,6 +255,33 @@ const Home: React.FC = () => {
           </Flex>
         </Grid>
       </RoundedBox>
+      <RoundedBox gridArea="moreSkills">
+        <Heading size="md" marginBottom={4}>
+          Conhecimentos Gerais
+        </Heading>
+        <List>
+          <ListItem marginBottom={4}>
+            <ListIcon icon={Code} color="#01E3A1" />
+            HTML5
+          </ListItem>
+          <ListItem marginBottom={4}>
+            <ListIcon icon={Code} color="#01E3A1" />
+            CSS3
+          </ListItem>
+          <ListItem marginBottom={4}>
+            <ListIcon icon={BorderClear} color="#01E3A1" />
+            UI / UX
+          </ListItem>
+          <ListItem marginBottom={4}>
+            <ListIcon icon={Folder} color="#01E3A1" />
+            MVC
+          </ListItem>
+          <ListItem marginBottom={4}>
+            <ListIcon icon={ChangeHistory} color="#01E3A1" />
+            Prototipagem (Figma, Adobe XD)
+          </ListItem>
+        </List>
+      </RoundedBox>
       <RoundedBox gridArea="about">
         <Heading size="md" marginBottom={4}>
           Sobre
@@ -266,9 +311,7 @@ const Home: React.FC = () => {
           javascript, como NodeJS no back-end e o React para o front-end. No
           último ano, coloquei dois projetos particulares no ar que estão
           citados acima na sessão de projetos, onde um deles, sendo a Carpede,
-          como principal. No momento parei minha carreira para focar
-          exclusivamente em meus estudos das novas tecnologias e procurar novas
-          oportunidades.
+          como principal.
         </Text>
         <Link
           target="_blank"
@@ -296,7 +339,7 @@ const Home: React.FC = () => {
         <Link
           target="_blank"
           className="linkButton"
-          href="https://www.carpede.com"
+          href="https://www.pluginzap.com"
         >
           <img src="/icons/pluginzap.svg" alt="" />
           <Heading size="sm">PluginZap</Heading>
