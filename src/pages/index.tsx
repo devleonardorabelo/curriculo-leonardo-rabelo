@@ -296,7 +296,7 @@ const Home: React.FC = () => {
         <Link
           target="_blank"
           className="linkButton"
-          href="https://www.carpede.com"
+          href="https://www.pluginzap.com"
         >
           <img src="/icons/pluginzap.svg" alt="" />
           <Heading size="sm">PluginZap</Heading>
