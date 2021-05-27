@@ -15,7 +15,6 @@ import {
   GitHub,
   LinkedIn,
   Mail,
-  Folder,
   BorderClear,
   Code,
   ChangeHistory,
@@ -95,7 +94,7 @@ const Home: React.FC = () => {
               letterSpacing="0.8px"
               marginBottom={2}
             >
-              Desenvolvedor Full-Stack
+              Front End Tech Lead at PaP
             </Heading>
             <Heading
               as="h4"
@@ -108,10 +107,13 @@ const Home: React.FC = () => {
             </Heading>
             <Grid
               templateAreas="
-                'input1 input2 input3'
+                'input1 input2 input3 input4'
               "
               gap={2}
             >
+              <LinkButton href="https://gitlab.com/devleonardorabelo">
+                <img src="/icons/gitlab.svg" alt="" />
+              </LinkButton>
               <LinkButton href="https://github.com/devleonardorabelo">
                 <GitHub />
               </LinkButton>
@@ -127,23 +129,23 @@ const Home: React.FC = () => {
       </RoundedBox>
       <RoundedBox gridArea="more">
         <Heading size="md" marginBottom={4}>
-          Projetos desenvolvidos
+          Trabalhando atualmente
         </Heading>
         <Link
           target="_blank"
           className="linkButton"
-          href="https://www.carpede.com"
+          href="https://play.google.com/store/apps/details?id=io.pontoaponto.motorista&hl=en"
         >
-          <img src="/icons/carpede.svg" alt="" />
-          <p>Carpede</p>
+          <img src="/icons/papmotorista.svg" alt="" />
+          <p>PaP Embaixador</p>
         </Link>
         <Link
           target="_blank"
           className="linkButton"
-          href="https://www.pluginzap.com"
+          href="https://play.google.com/store/apps/details?id=io.pontoaponto.passageiro&hl=en"
         >
-          <img src="/icons/pluginzap.svg" alt="" />
-          <p>PluginZap</p>
+          <img src="/icons/pappassageiro.svg" alt="" />
+          <p>PaP Passageiro</p>
         </Link>
       </RoundedBox>
       <RoundedBox gridArea="skills">
@@ -162,10 +164,19 @@ const Home: React.FC = () => {
             <Link
               target="_blank"
               className="linkButton"
-              href="https://www.javascript.com"
+              href="https://reactnative.dev"
             >
-              <img src="/icons/icons8-javascript.svg" alt="" />
-              <p>Javascript</p>
+              <img src="/icons/reactnative.svg" alt="" />
+              <p>React Native</p>
+            </Link>
+
+            <Link
+              target="_blank"
+              className="linkButton"
+              href="https://reactjs.org"
+            >
+              <img src="/icons/react.svg" alt="" />
+              <p>React JS</p>
             </Link>
 
             <Link
@@ -180,19 +191,10 @@ const Home: React.FC = () => {
             <Link
               target="_blank"
               className="linkButton"
-              href="https://nodejs.org/en/"
+              href="https://redux.js.org"
             >
-              <img src="/icons/icons8-node-js.svg" alt="" />
-              <p>Node JS</p>
-            </Link>
-
-            <Link
-              target="_blank"
-              className="linkButton"
-              href="https://reactnative.dev"
-            >
-              <img src="/icons/icons8-react-native.svg" alt="" />
-              <p>ReactJS / React Native</p>
+              <img src="/icons/redux.svg" alt="" />
+              <p>Redux</p>
             </Link>
 
             <Link
@@ -200,39 +202,39 @@ const Home: React.FC = () => {
               className="linkButton"
               href="https://www.mongodb.com"
             >
-              <img src="/icons/icons8-mongodb.svg" alt="" />
-              <p>MongoDB</p>
+              <img src="/icons/figma.svg" alt="" />
+              <p>Figma</p>
             </Link>
           </Flex>
           <Flex flexDirection="column" gridArea="otherSkills">
             <Heading size="md" marginBottom={4}>
               Outras Habilidades
             </Heading>
+
             <Link
               target="_blank"
               className="linkButton"
-              href="https://git-scm.com"
+              href="http://appcenter.ms"
             >
-              <img src="/icons/icons8-git.svg" alt="" />
-              <p>Git</p>
+              <img src="/icons/appcenter.svg" alt="" />
+              <p>App Center</p>
             </Link>
 
             <Link
               target="_blank"
               className="linkButton"
-              href="https://nextjs.org"
+              href="https://firebase.google.com"
             >
-              <img src="/icons/icons8-nextjs.svg" alt="" />
-              <p>NextJS</p>
+              <img src="/icons/firebase.svg" alt="" />
+              <p>Firebase</p>
             </Link>
-
             <Link
               target="_blank"
               className="linkButton"
-              href="https://sass-lang.com"
+              href="https://nodejs.org/en/"
             >
-              <img src="/icons/icons8-sass.svg" alt="" />
-              <p>Sass</p>
+              <img src="/icons/icons8-node-js.svg" alt="" />
+              <p>Node JS</p>
             </Link>
 
             <Link
@@ -247,10 +249,10 @@ const Home: React.FC = () => {
             <Link
               target="_blank"
               className="linkButton"
-              href="https://chakra-ui.com"
+              href="https://git-scm.com"
             >
-              <img src="/icons/icons8-chakra.svg" alt="" />
-              <p>Chakra UI</p>
+              <img src="/icons/icons8-git.svg" alt="" />
+              <p>Git / Gitflow</p>
             </Link>
           </Flex>
         </Grid>
@@ -260,6 +262,10 @@ const Home: React.FC = () => {
           Conhecimentos Gerais
         </Heading>
         <List>
+          <ListItem marginBottom={4}>
+            <ListIcon icon={Code} color="#01E3A1" />
+            Javascript
+          </ListItem>
           <ListItem marginBottom={4}>
             <ListIcon icon={Code} color="#01E3A1" />
             HTML5
@@ -273,10 +279,6 @@ const Home: React.FC = () => {
             UI / UX
           </ListItem>
           <ListItem marginBottom={4}>
-            <ListIcon icon={Folder} color="#01E3A1" />
-            MVC
-          </ListItem>
-          <ListItem marginBottom={4}>
             <ListIcon icon={ChangeHistory} color="#01E3A1" />
             Prototipagem (Figma, Adobe XD)
           </ListItem>
@@ -286,14 +288,7 @@ const Home: React.FC = () => {
         <Heading size="md" marginBottom={4}>
           Sobre
         </Heading>
-        <Text marginBottom={8}>
-          Olá! Eu sou o Leonardo, tenho 25 anos e sou de Brasília. Atualmente
-          estou trabalhando em meus projetos particulares e também estudando
-          diariamente para me aperfeiçoar na stack que utilizo.
-        </Text>
-        <Heading size="md" marginBottom={4}>
-          No que acredito
-        </Heading>
+
         <Text marginBottom={8}>
           Acredito que o esforço é a principal chave para o crescimento e quando
           feito em conjunto, o resultado é superior ao que foi planejado.
@@ -304,58 +299,22 @@ const Home: React.FC = () => {
           Experiência
         </Heading>
         <Text marginBottom={8}>
-          Desenvolvo profissionalmente há cerca de 5 anos, sempre como
-          freelancer. Trabalhei durante 3 anos exclusivamente como front-end em
-          desenvolvimento web. Pela necessidade de independência, me tornei
-          desenvolvedor full stack, utilizando as tecnologias derivadas do
-          javascript, como NodeJS no back-end e o React para o front-end. No
-          último ano, coloquei dois projetos particulares no ar que estão
-          citados acima na sessão de projetos, onde um deles, sendo a Carpede,
-          como principal.
+          Trabalho com desenvolvimento web desde 2013, onde criei a minha
+          própria agência digital para criar e vender demandas para as empresas.
+          Nesta experiência, tive muito contato direto com a necessidade do
+          cliente final e adquiri toda a experiência de gestão de um projeto.
+          Atualmente sou Tech Lead na PaP, onde sou o responsável pelo
+          desenvolvimento e sustentação de dois aplicativo de mobilidade, sendo
+          um destinado aos motoristas e o outro aos passageiros.
         </Text>
-        <Link
-          target="_blank"
-          className="linkButton"
-          href="https://www.carpede.com"
-        >
-          <img src="/icons/carpede.svg" alt="" />
-          <Heading size="sm">Carpede</Heading>
-        </Link>
-        <Text marginBottom={4}>
-          A Carpede é um projeto que tem como responsabilidade, dar a
-          oportunidade às empresas de delivery de pequeno e médio porte. Neste
-          projeto o desafio foi fazer com que todos os aplicativos funcionassem
-          através de duas APIs principais, onde a empresa pudesse gerenciar seus
-          produtos e entregas diretamente de um aplicativo principal e receber
-          um aplicativo indidual. Um aplicativo base foi criado e a partir do
-          mesmo é gerado um aplicativo para cada empresa, onde podem estar
-          distribuindo para seus clientes diretamente da Play Store.
-        </Text>
+        <Heading size="md" marginBottom={4}>
+          Objetivos
+        </Heading>
         <Text marginBottom={8}>
-          A próxima versão vai contar com uma versão web, ao qual está em
-          testes. O projeto é feito em React Native no mobile e NextJS na versão
-          web, fui o responsável por todos o desenvolvimento e idealização.
-        </Text>
-        <Link
-          target="_blank"
-          className="linkButton"
-          href="https://www.pluginzap.com"
-        >
-          <img src="/icons/pluginzap.svg" alt="" />
-          <Heading size="sm">PluginZap</Heading>
-        </Link>
-        <Text marginBottom={4}>
-          O PluginZap é um plugin que tem o intuito de auxiliar os sites que
-          possuem uma certa comunicação com o usuário/cliente e direciona-los ao
-          whatsapp empresarial para um melhor atendimento. Seu funcionamento é
-          bastante pratico e usual. Ao adicionar na página escolhida, o plugin
-          insere um botão customizado ao lado inferior direito da página no
-          formato da logo do whatsapp, onde ao clicar, é visualizado um
-          formulário com alguns campos para o usuário final entrar em contato.
-        </Text>
-        <Text marginBottom={8}>
-          Este projeto foi criado utilizando PHP, HTML5 e CSS3, onde fui o
-          front-end e idealizador da interface.
+          Tenho como objetivo pessoal participar de projetos que darão impacto
+          na sociedade, gosto de pensar que participarei de algo que vai ser
+          útil e bastante utilizado, onde eu possa sentir orgulho de dizer que
+          eu fiz parte daquilo.
         </Text>
       </RoundedBox>
     </Grid>
